@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: './', // <-- makes asset paths relative for production
   server: {
     port: 5173,
     proxy: {
@@ -10,3 +11,4 @@ export default defineConfig({
     }
   }
 })
+
