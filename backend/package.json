@@ -1,0 +1,26 @@
+{
+  "name": "devdebugiq-backend",
+  "version": "1.0.0",
+  "description": "Backend for DevDebugIQ Quiz App (Gemini API + OTP + Firebase)",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "firebase-admin": "^12.7.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
