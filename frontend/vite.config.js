@@ -3,9 +3,14 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',  // important: makes assets relative
+  base: './', // ensures relative paths for assets
   server: {
     port: 5173,
-    proxy: { '/api': 'http://localhost:3001' }
+    proxy: {
+      '/api': 'http://localhost:3001'
+    }
+  },
+  build: {
+    outDir: 'dist'
   }
 })
