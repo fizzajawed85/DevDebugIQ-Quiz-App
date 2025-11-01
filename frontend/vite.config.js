@@ -4,5 +4,9 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',  // ensures relative paths in index.html
+  base: './',  // ensures assets work on Vercel
+  server: {
+    port: 5173,
+    proxy: { '/api': 'http://localhost:3001' }
+  }
 })
