@@ -16,7 +16,7 @@ async function callGenerative(prompt, apiKey) {
     ],
   };
 
-  console.log("💬 Calling Gemini 2.0 API for hint...");
+  console.log(" Calling Gemini 2.0 API for hint...");
   const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -60,7 +60,7 @@ Do NOT reveal the correct option or give a full solution.
 
     res.json({ hint: String(hint).trim() });
   } catch (e) {
-    console.error("❌ Error in chatbot handler:", e);
+    console.error(" Error in chatbot handler:", e);
     res.status(500).json({ hint: "Hint service failed" });
   }
 }

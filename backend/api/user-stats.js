@@ -6,11 +6,11 @@ export async function handler(req, res) {
   try {
     const db = admin.database();
 
-    // ✅ Users
+    // Users
     const usersSnap = await db.ref("users").get();
     const users = usersSnap.exists() ? Object.values(usersSnap.val()) : [];
 
-    // ✅ Results / Quiz attempts
+    //  Results / Quiz attempts
     const resultsSnap = await db.ref("results").get();
     const resultsRaw = resultsSnap.exists() ? resultsSnap.val() : {};
 
@@ -36,14 +36,14 @@ export async function handler(req, res) {
       });
     });
 
-    // ✅ Average attempts per user
+    // Average attempts per user
     const avgAttemptsPerUser =
       users.length > 0 ? (results.length / users.length).toFixed(1) : 0;
 
-    // ✅ Active quizzes
+    // Active quizzes
     const activeQuizzes = activeQuizSet.size;
 
-    // ✅ Top category
+    // Top category
     const topCategory =
       Object.entries(byCategory)
         .sort((a, b) => b[1] - a[1])[0]?.[0] || "N/A";

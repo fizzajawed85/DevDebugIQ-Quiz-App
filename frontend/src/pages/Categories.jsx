@@ -21,7 +21,7 @@ export default function Categories() {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row overflow-hidden pt-24 bg-white dark:bg-[#010b18]">
-      {/* 🔹 LEFT SECTION */}
+      {/* LEFT SECTION */}
       <div className="w-full md:w-1/2 relative hidden md:flex items-center justify-center">
         <ParticleBackground />
         <div className="relative z-10 flex items-center justify-start px-10">
@@ -54,7 +54,7 @@ export default function Categories() {
         </div>
       </div>
 
-      {/* 🔹 RIGHT SECTION */}
+      {/* RIGHT SECTION */}
       <div className="w-full md:w-1/2 px-6 md:px-8 flex flex-col justify-center">
         <div className="max-w-3xl mx-auto w-full">
           {/* Header text */}
@@ -94,7 +94,7 @@ export default function Categories() {
         </div>
       </div>
 
-      {/* 🔹 MOBILE LEFT SECTION */}
+      {/* MOBILE LEFT SECTION */}
       <div className="md:hidden relative flex flex-col items-center justify-center py-10 bg-white dark:bg-[#010b18]">
         <ParticleBackground />
         <div className="relative z-10 px-6 text-center text-black dark:text-white">

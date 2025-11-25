@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-6xl z-50 flex items-center justify-between px-6 py-3 bg-gradient-to-r from-white/5 to-white/3 backdrop-blur-lg rounded-2xl border border-white/10 shadow-lg">
-      {/* 🔹 Logo */}
+      {/* Logo */}
       <div
         onClick={() => nav("/")}
         className="flex items-center gap-3 cursor-pointer"
@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔹 Right Section (Always visible on all screens) */}
+      {/* Right Section (Always visible on all screens) */}
       <div className="flex items-center gap-3">
         <ThemeToggle />
         <ProfileMenu />

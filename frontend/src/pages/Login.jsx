@@ -27,7 +27,7 @@ export default function Login() {
     try {
       const provider = new GoogleAuthProvider()
       provider.setCustomParameters({
-        prompt: 'select_account', // forces account chooser every time
+        prompt: 'select_account', 
       })
       const result = await signInWithPopup(auth, provider)
       nav('/categories')

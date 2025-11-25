@@ -15,7 +15,7 @@ export default function Result() {
       {/* Fixed padding top ensures content never goes under navbar */}
       <div className="pt-28 pb-10">
         <div className="max-w-full lg:max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* 🔹 Back button + Heading */}
+          {/* Back button + Heading */}
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 gap-4">
             <div className="flex items-center gap-2 text-slate-800 dark:text-white text-3xl font-bold">
               <CheckCircle2 size={28} className="text-blue-500 dark:text-blue-400" />
@@ -29,12 +29,12 @@ export default function Result() {
             </button>
           </div>
 
-          {/* 🔹 Score */}
+          {/* Score */}
           <div className="mb-6 text-lg font-bold text-slate-800 dark:text-white">
             Score: {correctCount} / {questions.length}
           </div>
 
-          {/* 🔹 Questions Review */}
+          {/* Questions Review */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">Review Questions</h3>
             {questions.map((q) => {

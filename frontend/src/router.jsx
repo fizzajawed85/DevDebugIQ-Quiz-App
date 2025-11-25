@@ -14,7 +14,7 @@ import Dashboard from './pages/Dashboard'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,   // 🔹 App is layout
+    element: <App />,   //App is layout
     children: [
       { index: true, element: <GettingStarted /> },
       { path: 'login', element: <Login /> },

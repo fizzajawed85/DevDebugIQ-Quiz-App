@@ -2,7 +2,7 @@
 import admin from "firebase-admin";
 import * as db from "firebase-admin/database";
 
-// 🔹 Initialize Firebase Admin
+// Initialize Firebase Admin
 if (!admin.apps.length) {
   if (process.env.FIREBASE_ADMIN_CREDENTIALS_JSON) {
     const cred = JSON.parse(process.env.FIREBASE_ADMIN_CREDENTIALS_JSON);
@@ -21,7 +21,7 @@ if (!admin.apps.length) {
   }
 }
 
-// 🔹 Verify OTP handler
+// Verify OTP handler
 export async function handler(req, res) {
   try {
     const { email, code } = req.body || {};

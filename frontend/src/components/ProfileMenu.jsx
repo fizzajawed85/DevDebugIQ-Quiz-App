@@ -23,7 +23,7 @@ export default function ProfileMenu() {
 
   return (
     <div className="relative">
-      {/* 🔹 Profile Icon Button */}
+      {/* Profile Icon Button */}
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-10 h-10 flex items-center justify-center 
@@ -34,7 +34,7 @@ export default function ProfileMenu() {
         {user?.displayName?.[0]?.toUpperCase() || <User size={18} />}
       </button>
 
-      {/* 🔹 Dropdown Menu */}
+      {/* Dropdown Menu */}
       {open && (
         <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-[#111827] text-black dark:text-white rounded-xl shadow-lg p-2 z-50 border border-black/5 dark:border-white/10">
           <button

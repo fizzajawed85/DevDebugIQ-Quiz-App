@@ -9,7 +9,7 @@ export default function Chatbot({ questionCode }) {
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
 
-  // ✅ Send message function (using fetch instead of axios)
+  // Send message function (using fetch instead of axios)
   async function send() {
     if (!input.trim()) return;
     const userMsg = input;
@@ -36,12 +36,12 @@ export default function Chatbot({ questionCode }) {
     }
   }
 
-  // ✅ Scroll to latest message
+  // Scroll to latest message
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // ✅ Send message on Enter key
+  // Send message on Enter key
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();

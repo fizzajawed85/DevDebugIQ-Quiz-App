@@ -1,7 +1,7 @@
 // backend/api/change-password.js
 import admin from "firebase-admin";
 
-// 🔹 Initialize Firebase Admin
+// Initialize Firebase Admin
 if (!admin.apps.length) {
   if (process.env.FIREBASE_ADMIN_CREDENTIALS_JSON) {
     const cred = JSON.parse(process.env.FIREBASE_ADMIN_CREDENTIALS_JSON);
@@ -20,7 +20,7 @@ if (!admin.apps.length) {
   }
 }
 
-// 🔹 Change Password Handler
+// Change Password Handler
 export async function handler(req, res) {
   try {
     const { email, newPassword } = req.body || {};

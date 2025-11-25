@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 const QUESTION_COUNT = 10;
 
-// ✅ Fallback questions in case Gemini fails
+// Fallback questions in case Gemini fails
 // backend/api/fallbackQuestions.js
 export const fallbackQuestions = [
   {

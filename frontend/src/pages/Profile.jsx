@@ -20,7 +20,7 @@ export default function Profile() {
   });
   const [loading, setLoading] = useState(true);
 
-  // 🧩 Load user data
+  // Load user data
   useEffect(() => {
     async function load() {
       if (!user) {
@@ -45,14 +45,14 @@ export default function Profile() {
     load();
   }, [user]);
 
-  // 🧩 Save profile
+  // Save profile
   async function save() {
     if (!user) return alert("Please login first.");
     await set(ref(db, `users/${user.uid}`), profile);
     alert("Profile updated successfully!");
   }
 
-  // 🧩 Handle avatar upload
+  // Handle avatar upload
   async function uploadAvatar(e) {
     const file = e.target.files[0];
     if (!file || !user) return;

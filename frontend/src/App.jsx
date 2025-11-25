@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import { AppContext } from './AppContext'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase/config'
-import { Outlet } from 'react-router-dom'  // 🔹 Outlet
+import { Outlet } from 'react-router-dom' 
 
 export default function App() {
   const [user, setUser] = useState(null)

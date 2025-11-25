@@ -19,7 +19,7 @@ export default function Quiz() {
   const correctStreak = useRef(0);
   const wrongStreak = useRef(0);
 
-  // ✅ Fetch quiz (using fetch API instead of axios)
+  //  Fetch quiz (using fetch API instead of axios)
   useEffect(() => {
     async function fetchQuiz() {
       setLoading(true);
@@ -45,7 +45,7 @@ export default function Quiz() {
     fetchQuiz();
   }, [category, difficulty]);
 
-  // ✅ Timer logic
+  // Timer logic
   useEffect(() => {
     setTimeLeft(180);
     const t = setInterval(() => {
@@ -60,7 +60,7 @@ export default function Quiz() {
     return () => clearInterval(t);
   }, [index, questions]);
 
-  // ✅ Handle answer
+  // Handle answer
   async function handleAnswer(choiceIndex) {
     if (!questions.length) return;
     const q = questions[index];
@@ -105,7 +105,7 @@ export default function Quiz() {
     }
   }
 
-  // ✅ Loading / No questions messages
+  // Loading / No questions messages
   if (loading || !questions.length)
     return (
       <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4">

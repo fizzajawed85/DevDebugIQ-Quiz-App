@@ -5,7 +5,7 @@ import nodemailer from "nodemailer";
 import admin from "firebase-admin";
 import * as db from "firebase-admin/database";
 
-// 🔹 Initialize Firebase Admin
+// Initialize Firebase Admin
 if (!admin.apps.length) {
   if (process.env.FIREBASE_ADMIN_CREDENTIALS_JSON) {
     const cred = JSON.parse(process.env.FIREBASE_ADMIN_CREDENTIALS_JSON);
@@ -24,7 +24,7 @@ if (!admin.apps.length) {
   }
 }
 
-// 🔹 Setup Nodemailer Transport
+// Setup Nodemailer Transport
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: parseInt(process.env.SMTP_PORT || "587", 10),
@@ -35,7 +35,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// 🔹 API Handler
+// API Handler
 export async function handler(req, res) {
   try {
     const { email } = req.body || {};
